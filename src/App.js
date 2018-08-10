@@ -10,6 +10,7 @@ class App extends Component {
     const { toggle } = this.state;
     return (
       <div className="App">
+        <div className={'page-container'}></div>
         <NextBtn name="next"/>
       </div>
     );
