@@ -1,1 +1,0 @@
-import * as chapter1 from 'chapter1';
