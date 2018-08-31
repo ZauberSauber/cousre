@@ -1,8 +1,9 @@
 import React from 'react';
 
-export const Page1 = () => (
-    <div className={'page-1'}>
+import './page1.css';
+
+export const Page1_1 = () => (
+    <div className={'page-1-1'}>
         <p>Page 1</p>
     </div>
 );
-
