@@ -17,14 +17,14 @@ class App extends Component {
               <div>
                   <ul>
                       <li>
-                          <Link to="/chapter1/page1">page 1</Link>
+                          <Link to="/chapter1/page1_1">page 1</Link>
                       </li>
                       <li>
-                          <Link to="/chapter1/page2">page 2</Link>
+                          <Link to="/chapter2/page2_1">page 2</Link>
                       </li>
                   </ul>
                   {routes.map((route, index)=> {
-                      console.log(route)
+                      // console.log(route)
                       return (
                           <Route
                               key={index}
