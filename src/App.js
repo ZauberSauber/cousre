@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { routes } from './routing/routes';
 
-import NextBtn from './components/buttons/nextBtn';
+import Footer from './components/footer';
 import './App.css';
 
 class App extends Component {
@@ -11,8 +11,6 @@ class App extends Component {
     return (
       <div className="App">
         <div className={'page-container'}></div>
-        <NextBtn name="next"/>
-
           <Router>
               <div>
                   <ul>
@@ -24,7 +22,6 @@ class App extends Component {
                       </li>
                   </ul>
                   {routes.map((route, index)=> {
-                      // console.log(route)
                       return (
                           <Route
                               key={index}
@@ -33,8 +30,11 @@ class App extends Component {
                           />
                       )}
                   )}
+
+                  <Footer/>
               </div>
           </Router>
+
       </div>
     );
   }

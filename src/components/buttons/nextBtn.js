@@ -1,11 +1,27 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import './nextBtn.css';
 
-const NextBtn = ({name}) => (
-    <button className={'next-btn'}>
-        {name}
-    </button>
-)
+class NextBtn extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
-export default NextBtn;
+    goToPage() {
+        this.props.history.push('/chapter2/page2_2')
+    }
+
+    render() {
+        return (
+            <button
+                className={'next-btn'}
+                onClick={this.goToPage.bind(this)}
+            >
+                {name}
+            </button>
+        )
+    }
+}
+
+export default withRouter(NextBtn);
