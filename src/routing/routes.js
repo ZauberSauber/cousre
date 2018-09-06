@@ -1,8 +1,7 @@
+// fixme: разобраться нужно тут или нет
 import Route from 'react-router-dom';
 
 import { Structure } from '../components/pages';
-
-console.log(Structure);
 
 export let routes = [];
 

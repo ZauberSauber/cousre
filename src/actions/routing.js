@@ -1,13 +1,15 @@
-/**
- * Action type: переход по роуту
- *
- * @type {string}
- */
-export const ROUTE_GO_TO = 'route_go_to';
+import * as routeActions from '../constants/routeActions';
 
 /**
- * Action type: переход назад
+ * Action: переход по роуту
  *
- * @type {string}
+ * @param {String} route
+ *
+ * @returns {*}
  */
-export const ROUTE_GO_BACK = 'route_go_back';
+export const routeGoTo = (route) => {
+    return {
+        type: routeActions.ROUTE_GO_TO,
+        payload: route
+    }
+};

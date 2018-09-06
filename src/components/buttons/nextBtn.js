@@ -1,5 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import { routeGoTo } from "../../actions/routing";
 
 import './nextBtn.css';
 
@@ -9,7 +12,8 @@ class NextBtn extends React.Component {
     }
 
     goToPage() {
-        this.props.history.push('/chapter2/page2_2')
+        this.props.history.push('/chapter2/page2_2');
+        this.props.routeGoTo('/chapter2/page2_2');
     }
 
     render() {
@@ -18,10 +22,22 @@ class NextBtn extends React.Component {
                 className={'next-btn'}
                 onClick={this.goToPage.bind(this)}
             >
-                {name}
+                {this.props.name}
             </button>
         )
     }
 }
 
-export default withRouter(NextBtn);
+const mapStateToProps = state => {
+    return {
+        appRoute: state.appRoute
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        routeGoTo: path => dispatch(routeGoTo(path))
+    };
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NextBtn));
