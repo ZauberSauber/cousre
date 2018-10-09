@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import { routes } from './routing/routes';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Footer from './components/footer';
 import './App.css';
@@ -21,20 +22,29 @@ class App extends Component {
                           <Link to="/chapter2/page2_1">page 2</Link>
                       </li>
                   </ul>
-                  {routes.map((route, index)=> {
-                      return (
-                          <Route
-                              key={index}
-                              path={route.path}
-                              component={route.component}
-                          />
-                      )}
-                  )}
+                  <TransitionGroup>
+                      <CSSTransition
+                          key={location.key}
+                          classNames={'fade'}
+                          timeout={300}
+                      >
+                          <Switch location={location}>
+                              {routes.map((route, index)=> {
+                                  return (
+                                      <Route
+                                          key={index}
+                                          path={route.path}
+                                          component={route.component}
+                                      />
+                                  )}
+                              )}
+                          </Switch>
 
+                      </CSSTransition>
+                  </TransitionGroup>
                   <Footer/>
               </div>
           </Router>
-
       </div>
     );
   }

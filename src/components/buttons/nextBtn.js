@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { routeGoTo } from "../../actions/routing";
@@ -7,6 +8,16 @@ import { routeGoTo } from "../../actions/routing";
 import './nextBtn.css';
 
 class NextBtn extends React.Component {
+    static blockClassName = 'next-btn';
+
+    static propTypes = {
+        className: PropTypes.string,
+    };
+
+    static defaultProps = {
+        //
+    };
+
     constructor(props) {
         super(props)
     }
@@ -19,7 +30,7 @@ class NextBtn extends React.Component {
     render() {
         return (
             <button
-                className={'next-btn'}
+                className={NextBtn.blockClassName}
                 onClick={this.goToPage.bind(this)}
             >
                 {this.props.name}
