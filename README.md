@@ -1,4 +1,4 @@
-this project was bootstrapped with <http://github.com/sw-yx/create-react-app-parcel>
+Проект powered by Parcel, почитать тут => <http://github.com/sw-yx/create-react-app-parcel>
 
 старт:
 
