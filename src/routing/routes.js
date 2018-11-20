@@ -1,8 +1,8 @@
-// fixme: разобраться нужно тут или нет
-import Route from 'react-router-dom';
-
-import { Structure } from '../components/pages';
-
+/**
+ * Струкутра роутов приложения
+ *
+ * @type {Array}
+ */
 export let routes = [];
 
 for (let chapter in Structure) {
