@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "components": "^0.1.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "react-scripts-parcel": "0.0.24",
+    "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "routing": "0.0.2"
   },
