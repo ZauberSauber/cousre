@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import './page1.css';
+import './page1.styl';
 
 export const Page1_1 = (props) => {
     const {

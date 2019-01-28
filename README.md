@@ -1,4 +1,6 @@
-Проект powered by Parcel, почитать тут => <http://github.com/sw-yx/create-react-app-parcel>
+Проект собирается Webpack 4
+
+```npm i```
 
 старт:
 

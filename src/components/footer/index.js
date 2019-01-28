@@ -2,7 +2,7 @@ import React from 'react';
 
 import NextBtn from '../buttons/nextBtn';
 
-import './footer.css';
+import './footer.styl';
 
 export default class Footer extends React.Component {
     render() {

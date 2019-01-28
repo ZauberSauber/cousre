@@ -1,3 +1,4 @@
+import { Structure } from '../components/pages';
 /**
  * Струкутра роутов приложения
  *

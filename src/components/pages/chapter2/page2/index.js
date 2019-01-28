@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './page2.css';
+import './page2.styl';
 
 export class Page2_2 extends React.Component {
     constructor() {

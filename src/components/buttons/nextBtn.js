@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { routeGoTo } from "../../actions/routing";
 
-import './nextBtn.css';
+import './nextBtn.styl';
 
 class NextBtn extends React.Component {
     static blockClassName = 'next-btn';

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './page1.css';
+import './page1.styl';
 
 export const Page2_1 = () => {
   return (

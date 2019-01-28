@@ -5,8 +5,8 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Footer from './components/footer';
 
-import './App.css';
-import './animations.css';
+import './App.styl';
+import './animations.styl';
 
 class App extends Component {
 

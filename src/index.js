@@ -5,9 +5,13 @@ import { Provider } from 'react-redux';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import './index.css';
+import './index.styl';
 
 import store from './store';
+
+const div = document.createElement('div');
+div.id = 'root';
+document.body.appendChild(div);
 
 render(
     <Provider store={store}>
