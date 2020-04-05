@@ -3,13 +3,15 @@ import * as routeActions from '../constants/routeActions';
 /**
  * Action: переход по роуту
  *
- * @param {String} route
- *
- * @returns {*}
+ * @returns {{payload: {direction: *}, type: string}}
  */
-export const routeGoTo = (route) => {
-    return {
-        type: routeActions.ROUTE_GO_TO,
-        payload: route
-    }
-};
+export const routeGoNext = () => ({
+        type: routeActions.ROUTE_GO_NEXT,
+        payload: {direction: 'next'}
+    });
+
+
+export const routeGoBack = () => ({
+    type: routeActions.ROUTE_GO_BACK,
+    payload: {direction: 'back'}
+});

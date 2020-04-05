@@ -7,12 +7,12 @@ const initialState = {
 
 const routes = (state = initialState, action) => {
     switch (action.type) {
-        case routeActions.ROUTE_GO_TO:
+        case routeActions.ROUTE_GO_NEXT:
             return {
                 ...state,
                 history: [...state.history, action.payload]
             };
-        case 'GO_BACK':
+        case routeActions.ROUTE_GO_BACK:
             return {
                 ...state
             };

@@ -1,4 +1,6 @@
 import { Structure } from '../components/pages';
+
+
 /**
  * Струкутра роутов приложения
  *
@@ -6,18 +8,30 @@ import { Structure } from '../components/pages';
  */
 export let routes = [];
 
+export let appIndex = [];
+let index = 0;
+
 for (let chapter in Structure) {
    if ( Structure.hasOwnProperty(chapter) ) {
+       appIndex[index] = [];
+
        for (let page in Structure[chapter]) {
            if ( Structure[chapter].hasOwnProperty(page)) {
+               appIndex[index].push({
+                   path: `/${chapter}/${page}`,
+               });
                routes.push({
                    path: `/${chapter}/${page}`,
                    component: Structure[chapter][page]
                })
            }
        }
+
+       index++;
    }
 }
+
+console.log(appIndex);
 // Пример сгенерированного роутинга
 /*export const routes = [
     {

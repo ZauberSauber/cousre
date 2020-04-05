@@ -3,7 +3,7 @@
  *
  * @type {string}
  */
-export const ROUTE_GO_TO = 'route_go_to';
+export const ROUTE_GO_NEXT = 'route_go_next';
 
 /**
  * Action type: переход назад
